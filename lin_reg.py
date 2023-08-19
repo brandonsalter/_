@@ -31,7 +31,7 @@ class LR:
     def predict(self, test_df: pd.DataFrame, label: str, coefficients: np.array, intercept: np.array):
         test_matrix = test_df.drop(label, axis=1).to_numpy()
         y_actual = test_df[label].to_numpy()
-        y_pred = np.dot(test_matrix, coefficients)
+        y_pred = intercept + np.dot(test_matrix, coefficients)
         e = y_actual - y_pred
         test_sse = (np.linalg.norm(e))**2.
         return y_pred, test_sse
