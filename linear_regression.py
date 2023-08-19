@@ -1,6 +1,8 @@
 import pandas as pd
 import numpy as np
 
+np.set_printoptions(precision=8, threshold=1000, edgeitems=3, linewidth=75, suppress=True, nanstr='nan', infstr='inf')
+
 class LR:
     
     def __init__(self):
