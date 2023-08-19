@@ -25,9 +25,3 @@ class LR:
         intercept = x[0]
         coefficients = x[1:]
         return intercept, coefficients, train_sse
-
-    # def fit(self, df: pd.DataFrame, label: str):
-    #     coefficients, train_sse = self.linear_regression(df,label)
-    #     intercept = coefficients[0]
-    #     coefficients = coefficients[1:]
-    #     return intercept, coefficients, train_sse
